@@ -1,7 +1,9 @@
 /* ----------------------------
    Canela (LOCAL) — title only
-   Update path if needed
+   /fonts/canela/Canela-Medium.woff2
+   /fonts/canela/Canela-Medium.woff
    ---------------------------- */
+
 @font-face{
   font-family: "Canela";
   src:
@@ -41,7 +43,9 @@ html{ -webkit-text-size-adjust: 100%; }
 body{
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Inter",
+               -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -129,7 +133,9 @@ body{
   text-align: left;
 }
 
-.lead, .lines, .body{
+.lead,
+.lines,
+.body{
   font-size: var(--body-size);
   line-height: var(--body-lh);
 }
@@ -158,7 +164,7 @@ body{
   margin: 34px auto;
 }
 
-/* ---------- Reveal (scroll fade) ---------- */
+/* ---------- Reveal on scroll ---------- */
 .reveal{
   opacity: 0;
   transform: translateY(10px);
@@ -171,7 +177,7 @@ body{
   transform: translateY(0);
 }
 
-/* Reduce motion */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   .reveal{
     opacity: 1 !important;
