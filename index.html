@@ -7,72 +7,77 @@
   <title>Vincent Preti Architecture</title>
   <meta name="description" content="Vincent Preti Architecture — Architecture de transformation, Paris.">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Spectral:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=final">
+  <!-- Incrémente le v= si Safari met en cache -->
+  <link rel="stylesheet" href="style.css?v=scroll-3">
 </head>
 
 <body>
   <main class="wrap">
 
-    <header class="header">
-      <h1 class="title">Vincent Preti Architecture</h1>
-      <p class="positioning">Architecture de transformation</p>
-      <p class="meta">Paris</p>
-    </header>
+    <!-- FAÇADE -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero-inner">
 
-    <section class="intro">
-      <p>
-        Une pratique d’architecture intervenant dans le neuf comme dans la transformation
-        de l’existant.
-      </p>
+        <header class="brand">
+          <h1 class="title">Vincent Preti Architecture</h1>
+          <p class="positioning">ARCHITECTURE DE TRANSFORMATION</p>
+          <p class="city">Paris</p>
+        </header>
 
-      <p>
-        Le projet est pensé comme une opération de précision.<br>
-        Révéler des qualités latentes.<br>
-        Clarifier les usages.<br>
-        Construire une atmosphère.
-      </p>
+        <section class="contact" aria-label="Contact">
+          <p class="contact-label">New project inquiries</p>
+          <a class="email" href="mailto:contact@vincent-preti.com">
+            contact@vincent-preti.com
+          </a>
+        </section>
 
-      <p>
-        Le travail s’attache à la justesse des proportions, à la matière, à la lumière
-        et au détail, avec une attention constante portée au contexte, à la pérennité
-        et à la mise en œuvre.
-      </p>
+        <footer class="hero-footer">
+          <p>© <span id="y"></span> Vincent Preti Architecture</p>
+        </footer>
+
+      </div>
     </section>
 
-    <section class="intro intro-en">
-      <p>
-        Vincent Preti Architecture is an architectural practice working across new
-        construction and the transformation of existing buildings.
-      </p>
+    <!-- TEXTE AU SCROLL -->
+    <section class="copy" aria-label="Statement">
 
-      <p>
-        Each project is conceived as a precise operation.<br>
-        Revealing latent qualities.<br>
-        Clarifying use.<br>
-        Shaping an atmosphere.
-      </p>
+      <!-- FR -->
+      <div class="copy-block fr" lang="fr">
+        <p>
+          Le projet est conçu comme une opération de précision.<br>
+          Révéler des qualités latentes.<br>
+          Clarifier les usages.<br>
+          Construire une atmosphère.
+        </p>
 
-      <p>
-        The work focuses on proportion, materiality, light and detail, with constant
-        attention to context, long-term durability and construction.
-      </p>
+        <p>
+          Une attention constante portée aux proportions, à la matière, à la lumière et au détail.<br>
+          Chaque intervention s’inscrit dans un contexte exigeant, avec une recherche de justesse,
+          de cohérence et de pérennité.
+        </p>
+      </div>
+
+      <!-- EN -->
+      <div class="copy-block en" lang="en">
+        <p>
+          The project is conceived as a precise operation.<br>
+          Revealing latent qualities.<br>
+          Clarifying use.<br>
+          Shaping an atmosphere.
+        </p>
+
+        <p>
+          Constant attention is given to proportion, materiality, light and detail.<br>
+          Each intervention is grounded in a demanding context, with a search for
+          precision, coherence and long-term durability.
+        </p>
+      </div>
+
     </section>
-
-    <section class="contact">
-      <p class="contact-label">New project inquiries</p>
-      <a class="link" href="mailto:contact@vincent-preti.com">
-        contact@vincent-preti.com
-      </a>
-    </section>
-
-    <footer class="footer">
-      <p>© <span id="y"></span> Vincent Preti Architecture</p>
-    </footer>
 
   </main>
 
