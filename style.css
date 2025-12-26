@@ -33,10 +33,7 @@ body{
 
 /* titre */
 .title{
-  font-family: "Canela",
-               "Canela Text",
-               "Times New Roman",
-               serif;
+  font-family: "Spectral", Georgia, serif;
 
   font-size: 36px;
   line-height: 1.15;
