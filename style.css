@@ -1,241 +1,182 @@
-/* ==========================================================
-   FONTS
-   ========================================================== */
+/* ----------------------------
+   Canela (LOCAL) — titre only
+   Place tes fichiers ici :
+   /assets/fonts/Canela-Regular.woff2
+   /assets/fonts/Canela-Regular.woff
+   ---------------------------- */
 
-/* Canela — TITRE UNIQUEMENT */
 @font-face {
   font-family: "Canela";
-  src: url("fonts/Canela-Regular.woff2") format("woff2"),
-       url("fonts/Canela-Regular.woff") format("woff");
+  src:
+    url("/assets/fonts/Canela-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Canela-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Canela";
-  src: url("fonts/Canela-Medium.woff2") format("woff2"),
-       url("fonts/Canela-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
 
-/* ==========================================================
-   RESET
-   ========================================================== */
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* ==========================================================
-   VARIABLES
-   ========================================================== */
-
-:root {
+/* ---------- Tokens ---------- */
+:root{
   --bg: #ffffff;
-  --fg: #111111;
+  --text: #111111;
+  --muted: #777777;
+  --muted2: #9a9a9a;
+  --rule: rgba(17,17,17,.12);
+  --rule2: rgba(17,17,17,.08);
 
-  --muted: #7a7a7a;
-  --fr: #4a4a4a;      /* texte FR */
-  --en: #8c8c8c;      /* texte EN */
-
-  --rule: rgba(0,0,0,.10);
-
-  --wrap: 860px;
-  --text: 560px;
-
-  --pad-x: 24px;
+  --page-pad-x: 22px;
+  --max: 760px;
+  --max-text: 620px;
 }
 
-/* ==========================================================
-   BASE
-   ========================================================== */
-
-body {
+/* ---------- Base ---------- */
+body{
   background: var(--bg);
-  color: var(--fg);
-
-  font-family: "Inter",
-               -apple-system,
-               BlinkMacSystemFont,
-               "Segoe UI",
-               Helvetica,
-               Arial,
-               sans-serif;
-
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-.wrap {
-  width: min(var(--wrap), 100%);
-  margin: 0 auto;
-  padding: 0 var(--pad-x);
+.page{
+  width: 100%;
 }
 
-/* ==========================================================
-   HERO / FAÇADE
-   ========================================================== */
-
-.hero {
+/* ---------- HERO ---------- */
+.hero{
   min-height: 100svh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 72px var(--page-pad-x) 56px;
 }
 
-.hero-inner {
-  width: 100%;
-  padding: 92px 0 56px;
+.hero__inner{
+  width: min(var(--max), 100%);
   text-align: center;
 }
 
-/* Brand */
-
-.title {
+/* Titre (Canela uniquement ici) */
+.title{
   font-family: "Canela", "Spectral", Georgia, serif;
-  font-size: 40px;
   font-weight: 400;
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px 0;
+  letter-spacing: -0.015em;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.08;
+  margin: 0 0 14px 0;
 }
 
-.positioning {
+.tagline{
   margin: 0 0 14px 0;
   font-size: 13px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #3b3b3b;
+  color: rgba(17,17,17,.72);
 }
 
-.city {
-  margin: 0;
+.city{
+  margin: 0 0 34px 0;
   font-size: 14px;
   color: var(--muted);
 }
 
-/* ==========================================================
-   CONTACT
-   ========================================================== */
-
-.contact {
-  margin-top: 36px;
+.hero__contact{
+  margin-top: 22px;
 }
 
-.contact-label {
+.kicker{
   margin: 0 0 10px 0;
   font-size: 12px;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.20em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.email {
+.email{
   display: inline-block;
   font-size: 16px;
-  color: var(--fg);
   text-decoration: underline;
   text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
 }
 
-/* Footer inside hero */
-
-.hero-footer {
-  margin-top: 42px;
+.copyright{
+  margin: 34px 0 0 0;
   font-size: 13px;
-  color: #9a9a9a;
+  color: var(--muted2);
 }
 
-/* ==========================================================
-   TEXT / AU SCROLL
-   ========================================================== */
-
-.copy {
-  padding: 56px 0 92px;
-  border-top: 1px solid var(--rule);
+/* ---------- Rules ---------- */
+.rule{
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 0 auto;
+  width: min(var(--max), calc(100% - (2 * var(--page-pad-x))));
 }
 
-.copy-block {
-  width: min(var(--text), 100%);
+.rule--soft{
+  background: var(--rule2);
+  width: min(var(--max-text), 100%);
+  margin: 34px auto;
+}
+
+/* ---------- MANIFESTO ---------- */
+.manifesto{
+  padding: 56px var(--page-pad-x) 80px;
+}
+
+.manifesto__inner{
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.block{
+  width: min(var(--max-text), 100%);
   margin: 0 auto;
   text-align: left;
-
-  opacity: 0;
-  transform: translateY(10px);
-  animation: reveal .7s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 30%;
 }
 
-.copy-block p {
+.block p{
   margin: 0 0 22px 0;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
-/* FR */
-
-.copy-block.fr {
-  color: var(--fr);
-  padding-top: 32px;
+.block--fr{
+  color: rgba(17,17,17,.84);
 }
 
-/* EN */
-
-.copy-block.en {
-  color: var(--en);
+.block--en{
+  color: rgba(17,17,17,.52);
   font-style: italic;
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid var(--rule);
 }
 
-/* Fallback si scroll-driven animations non supportées */
-
-@supports not (animation-timeline: view()) {
-  .copy-block {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* ==========================================================
-   ANIMATION
-   ========================================================== */
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
-
-@media (max-width: 480px) {
-
-  .title {
-    font-size: 32px;
+/* ---------- Mobile tuning ---------- */
+@media (max-width: 520px){
+  :root{
+    --page-pad-x: 20px;
   }
 
-  .hero-inner {
-    padding: 84px 0 52px;
+  .hero{
+    padding-top: 64px;
+    padding-bottom: 44px;
   }
 
-  .copy {
-    padding: 48px 0 84px;
+  .city{ margin-bottom: 28px; }
+
+  .block p{
+    font-size: 17px;
+    line-height: 1.72;
   }
 
-  .copy-block p {
-    font-size: 15.5px;
+  .rule--soft{
+    margin: 28px auto;
   }
 }
