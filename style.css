@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -8,29 +8,39 @@ html, body {
   padding: 0;
 }
 
-/* Base */
+/* BASE TYPO */
 body {
   background: #ffffff;
   color: #111111;
 
-  font-family: "Inter", -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Inter",
+               -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Helvetica,
+               Arial,
+               sans-serif;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Layout */
+/* CONTENEUR GLOBAL — CENTRÉ */
 .wrap {
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 120px 24px 80px;
+
+  text-align: center; /* centre TITRE, META, CONTACT */
 }
 
-/* TITRE — Canela si dispo */
+/* TITRE — CENTRÉ */
 .title {
-  font-family: "Canela", "Canela Text", "Libre Baskerville",
-               "Times New Roman", serif;
+  font-family: "Canela",
+               "Canela Text",
+               "Libre Baskerville",
+               "Times New Roman",
+               serif;
 
   font-size: 36px;
   line-height: 1.15;
@@ -39,22 +49,28 @@ body {
   margin: 0 0 10px 0;
 }
 
-/* Meta */
+/* META — CENTRÉ */
 .meta {
   font-size: 14px;
   color: #777;
   margin-bottom: 56px;
 }
 
-/* Texte */
+/* BLOC TEXTE — CENTRÉ MAIS TEXTE ALIGNÉ À GAUCHE */
+.intro {
+  max-width: 560px;        /* largeur éditoriale */
+  margin: 0 auto 52px;    /* centre le bloc */
+  text-align: left;       /* texte ALIGNÉ À GAUCHE */
+}
+
+/* PARAGRAPHES */
 .intro p {
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 22px 0;
-  font-weight: 400;
 }
 
-/* Contact */
+/* CONTACT — CENTRÉ */
 .contact {
   margin-top: 48px;
 }
@@ -66,14 +82,14 @@ body {
   text-underline-offset: 4px;
 }
 
-/* Footer */
+/* FOOTER — CENTRÉ */
 .footer {
   margin-top: 96px;
   font-size: 13px;
   color: #888;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
   .wrap {
     padding: 90px 22px 70px;
@@ -81,6 +97,10 @@ body {
 
   .title {
     font-size: 30px;
+  }
+
+  .intro {
+    max-width: 100%;
   }
 
   .intro p {
