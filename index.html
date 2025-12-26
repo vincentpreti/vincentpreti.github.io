@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Vincent Preti Architecture</title>
   <meta name="description" content="Vincent Preti Architecture — Publication prévue en 2026." />
 
@@ -11,13 +12,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css?v=14" />
 </head>
 
 <body>
   <main class="page" role="main">
 
-    <!-- HERO (fixed layer) -->
+    <!-- HERO — fixed layer -->
     <section class="hero layer hero-layer" aria-label="Vincent Preti Architecture">
       <div class="hero__inner">
         <h1 class="title">Vincent Preti Architecture</h1>
@@ -34,10 +36,11 @@
       <div class="scrollHint" aria-hidden="true"></div>
     </section>
 
-    <!-- MANIFESTO (fixed layer, fades in over hero) -->
+    <!-- MANIFESTO — fixed layer fading in over hero -->
     <section class="manifesto layer manifesto-layer" aria-label="Statement">
       <div class="manifesto__inner">
 
+        <!-- FR -->
         <div class="block block--fr" lang="fr">
           <p class="lead">Le projet est conçu comme une opération de précision.</p>
 
@@ -57,6 +60,7 @@
 
         <div class="divider" aria-hidden="true"></div>
 
+        <!-- EN -->
         <div class="block block--en" lang="en">
           <p class="lead">The project is conceived as an operation of precision.</p>
 
@@ -79,6 +83,7 @@
 
   </main>
 
-  <script src="main.js"></script>
+  <!-- Script (cross-fade + blur) -->
+  <script src="main.js?v=14"></script>
 </body>
 </html>
