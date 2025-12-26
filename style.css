@@ -1,18 +1,17 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
+/* reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+body{
+  background:#fff;
+  color:#111;
 
-/* BASE TYPO */
-body {
-  background: #ffffff;
-  color: #111111;
+  /* centre TOUT le contenu dans la page */
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
 
+  /* typo */
   font-family: "Inter",
                -apple-system,
                BlinkMacSystemFont,
@@ -25,20 +24,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* CONTENEUR GLOBAL — CENTRÉ */
-.wrap {
-  max-width: 720px;
-  margin: 0 auto;
+/* colonne centrale */
+.wrap{
+  width: min(720px, 100%);
   padding: 120px 24px 80px;
-
-  text-align: center; /* centre TITRE, META, CONTACT */
+  text-align: center; /* titre, Paris, contact, footer centrés */
 }
 
-/* TITRE — CENTRÉ */
-.title {
+/* titre */
+.title{
   font-family: "Canela",
                "Canela Text",
-               "Libre Baskerville",
                "Times New Roman",
                serif;
 
@@ -49,61 +45,45 @@ body {
   margin: 0 0 10px 0;
 }
 
-/* META — CENTRÉ */
-.meta {
+/* meta */
+.meta{
   font-size: 14px;
   color: #777;
-  margin-bottom: 56px;
+  margin: 0 0 56px 0;
 }
 
-/* BLOC TEXTE — CENTRÉ MAIS TEXTE ALIGNÉ À GAUCHE */
-.intro {
-  max-width: 560px;        /* largeur éditoriale */
-  margin: 0 auto 52px;    /* centre le bloc */
-  text-align: left;       /* texte ALIGNÉ À GAUCHE */
+/* bloc texte centré MAIS texte aligné à gauche */
+.intro{
+  width: min(560px, 100%);
+  margin: 0 auto 52px;
+  text-align: left;
 }
 
-/* PARAGRAPHES */
-.intro p {
+.intro p{
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 22px 0;
 }
 
-/* CONTACT — CENTRÉ */
-.contact {
-  margin-top: 48px;
-}
-
-.link {
+/* contact */
+.contact{ margin-top: 48px; }
+.link{
   font-size: 15px;
-  color: #111;
+  color:#111;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* FOOTER — CENTRÉ */
-.footer {
+/* footer */
+.footer{
   margin-top: 96px;
   font-size: 13px;
-  color: #888;
+  color:#888;
 }
 
-/* MOBILE */
-@media (max-width: 480px) {
-  .wrap {
-    padding: 90px 22px 70px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .intro {
-    max-width: 100%;
-  }
-
-  .intro p {
-    font-size: 16px;
-  }
+/* mobile */
+@media (max-width: 480px){
+  .wrap{ padding: 90px 22px 70px; }
+  .title{ font-size: 30px; }
+  .intro p{ font-size: 16px; }
 }
