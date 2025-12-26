@@ -1,17 +1,16 @@
-/* reset */
+/* RESET */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
-body{
-  background:#fff;
-  color:#111;
+/* BASE */
+body {
+  background: #ffffff;
+  color: #111111;
 
-  /* centre TOUT le contenu dans la page */
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
-  /* typo */
   font-family: "Inter",
                -apple-system,
                BlinkMacSystemFont,
@@ -24,63 +23,85 @@ body{
   text-rendering: optimizeLegibility;
 }
 
-/* colonne centrale */
-.wrap{
+/* LAYOUT */
+.wrap {
   width: min(720px, 100%);
-  padding: 120px 24px 80px;
-  text-align: center; /* titre, Paris, contact, footer centrés */
+  padding: 88px 24px 72px;
+  text-align: center;
 }
 
-/* titre */
-.title{
+/* HEADER */
+.title {
   font-family: "Spectral", Georgia, serif;
-
   font-size: 36px;
+  font-weight: 500;
   line-height: 1.15;
-  font-weight: 400;
   letter-spacing: -0.01em;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
 }
 
-/* meta */
-.meta{
+.positioning {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.meta {
   font-size: 14px;
   color: #777;
-  margin: 0 0 56px 0;
+  margin-bottom: 28px;
 }
 
-/* bloc texte centré MAIS texte aligné à gauche */
-.intro{
-  width: min(560px, 100%);
-  margin: 0 auto 52px;
+/* TEXT BLOCK */
+.intro {
+  max-width: 560px;
+  margin: 0 auto 36px;
   text-align: left;
 }
 
-.intro p{
+.intro p {
   font-size: 17px;
   line-height: 1.65;
-  margin: 0 0 22px 0;
+  margin-bottom: 20px;
 }
 
-/* contact */
-.contact{ margin-top: 48px; }
-.link{
+/* ENGLISH VERSION */
+.intro-en {
+  color: #666;
+  font-size: 16px;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 40px;
+}
+
+.contact-label {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.link {
   font-size: 15px;
-  color:#111;
+  color: #111;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* footer */
-.footer{
-  margin-top: 96px;
+/* FOOTER */
+.footer {
+  margin-top: 88px;
   font-size: 13px;
-  color:#888;
+  color: #999;
 }
 
-/* mobile */
-@media (max-width: 480px){
-  .wrap{ padding: 90px 22px 70px; }
-  .title{ font-size: 30px; }
-  .intro p{ font-size: 16px; }
+/* MOBILE */
+@media (max-width: 480px) {
+  .wrap { padding: 72px 22px 64px; }
+  .title { font-size: 30px; }
+  .intro p { font-size: 16px; }
 }
