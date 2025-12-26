@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vincent Preti Architecture</title>
-  <meta name="description" content="Vincent Preti Architecture — Architecture de transformation — Paris." />
+  <meta name="description" content="Vincent Preti Architecture — Publication prévue en 2026." />
 
-  <!-- Inter (corps) -->
+  <!-- Inter (body text) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -15,64 +15,70 @@
 </head>
 
 <body>
-  <main class="page">
+  <main class="page" role="main">
+
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="Vincent Preti Architecture">
       <div class="hero__inner">
         <h1 class="title">Vincent Preti Architecture</h1>
-        <p class="tagline">ARCHITECTURE DE TRANSFORMATION</p>
         <p class="city">Paris</p>
 
-        <div class="hero__contact">
+        <div class="contact">
           <p class="kicker">NEW PROJECT INQUIRIES</p>
-          <a class="email" href="mailto:contact@vincent-preti.com">contact@vincent-preti.com</a>
+          <a class="email" href="mailto:contact@vincent-preti.com">
+            contact@vincent-preti.com
+          </a>
         </div>
-
-        <p class="copyright">© <span id="y"></span> Vincent Preti Architecture</p>
       </div>
+
+      <div class="scrollHint" aria-hidden="true"></div>
     </section>
 
-    <!-- DIVIDER -->
-    <hr class="rule" />
-
-    <!-- MANIFESTE -->
-    <section class="manifesto" aria-label="Manifeste">
+    <!-- MANIFESTO -->
+    <section class="manifesto" aria-label="Statement">
       <div class="manifesto__inner">
-        <div class="block block--fr">
-          <p>
-            Le projet est conçu comme une opération de précision.<br>
+
+        <div class="block block--fr reveal" lang="fr">
+          <p class="lead">Le projet est conçu comme une opération de précision.</p>
+
+          <p class="lines">
             Révéler des qualités latentes.<br>
             Clarifier les usages.<br>
-            Construire une atmosphère.
+            Installer une tension architecturale silencieuse.
           </p>
 
-          <p>
-            Une attention constante portée aux proportions, à la matière, à la lumière et au détail.<br>
-            Chaque intervention s’inscrit dans un contexte exigeant, avec une recherche de justesse, de cohérence et de pérennité.
+          <p class="body">
+            Une attention portée aux proportions, à la matière, à la lumière et au détail,
+            avec une recherche de justesse, de cohérence et de pérennité.
           </p>
+
+          <p class="date">Publication prévue en 2026</p>
         </div>
 
-        <hr class="rule rule--soft" />
+        <div class="divider reveal" aria-hidden="true"></div>
 
-        <div class="block block--en">
-          <p>
-            The work is conceived as a precise operation.<br>
-            Revealing latent qualities.<br>
-            Clarifying use.<br>
-            Shaping an atmosphere.
+        <div class="block block--en reveal" lang="en">
+          <p class="lead">The project is conceived as an operation of precision.</p>
+
+          <p class="lines">
+            To reveal latent qualities.<br>
+            To clarify uses.<br>
+            To establish a silent architectural tension.
           </p>
 
-          <p>
-            Constant attention is given to proportion, materiality, light and detail.<br>
-            Each intervention is grounded in a demanding context, with a search for precision, coherence and long-term durability.
+          <p class="body">
+            A sustained attention to proportion, materiality, light and detail,
+            guided by a pursuit of accuracy, coherence and durability.
           </p>
+
+          <p class="date">Publication scheduled for 2026</p>
         </div>
+
       </div>
     </section>
+
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
