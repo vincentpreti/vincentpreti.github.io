@@ -27,7 +27,6 @@ img, svg{ display: block; max-width: 100%; }
   --bg: #ffffff;
 
   --text: rgba(17,17,17,.86);
-  --en: rgba(17,17,17,.52);
   --muted: rgba(17,17,17,.62);
   --rule: rgba(17,17,17,.10);
 
@@ -35,8 +34,9 @@ img, svg{ display: block; max-width: 100%; }
   --max: 760px;
   --max-text: 620px;
 
-  --body-size: 18px;
-  --body-lh: 1.75;
+  /* Manifesto typography */
+  --body-size: 16.5px;
+  --body-lh: 1.90;
 
   /* scroll distance used to complete the crossfade */
   --fade-range: 55vh;
@@ -92,7 +92,7 @@ body{
   text-align: center;
 }
 
-/* Title: slightly smaller + more air (as requested) */
+/* Title: airy Canela */
 .title{
   font-family: "Canela", Georgia, serif;
   font-weight: 500;
@@ -146,7 +146,7 @@ body{
 /* ---------- MANIFESTO layer ---------- */
 .manifesto-layer{
   opacity: var(--man-opacity);
-  pointer-events: none; /* becomes interactive when mostly visible */
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -172,23 +172,50 @@ body{
   line-height: var(--body-lh);
 }
 
-.lead{ margin-bottom: 18px; }
-.lines{ margin-bottom: 18px; }
-.body{ margin-bottom: 18px; }
-
-.date{
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 6px;
+/* French hierarchy */
+.block--fr .lead{
+  margin-bottom: 18px;
+  color: rgba(17,17,17,.86);
+}
+.block--fr .lines{
+  margin-bottom: 32px;
+  color: rgba(17,17,17,.86);
+}
+.block--fr .body{
+  margin-bottom: 18px;
+  color: rgba(17,17,17,.74);
 }
 
+/* English: quieter + italic */
 .block--en{
-  color: var(--en);
+  color: rgba(17,17,17,.45);
   font-style: italic;
 }
 
+/* Ensure spacing matches FR */
+.block--en .lead{ margin-bottom: 18px; }
+.block--en .lines{ margin-bottom: 32px; }
+.block--en .body{ margin-bottom: 18px; }
+
+/* Date: language-driven (your rule) */
+.date{
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+.block--fr .date{
+  color: rgba(17,17,17,.86);
+  font-style: normal;
+}
+
+.block--en .date{
+  color: rgba(17,17,17,.45);
+  font-style: italic;
+}
+
+/* Divider */
 .divider{
   width: min(var(--max-text), 100%);
   height: 1px;
@@ -196,7 +223,7 @@ body{
   margin: 34px auto;
 }
 
-/* ---------- Reduced motion: no overlay, normal layout ---------- */
+/* ---------- Reduced motion: normal layout ---------- */
 @media (prefers-reduced-motion: reduce){
   .page{
     height: auto;
@@ -224,9 +251,9 @@ body{
 @media (max-width: 520px){
   :root{
     --pad-x: 20px;
-    --body-size: 17px;
-    --body-lh: 1.72;
     --fade-range: 60vh;
+    --body-size: 16px;
+    --body-lh: 1.88;
   }
 
   .layer{
